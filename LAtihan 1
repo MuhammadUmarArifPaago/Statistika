@@ -1,0 +1,12 @@
+data_elen = read.delim("clipboard")
+View(data_elen)
+mean(data_elen$Tinggi.Badan) 
+str(data_elen)
+
+
+data_umar = read.csv("C:DataUmar.csv")
+View(data_umar)
+
+
+data_umar = read.xlsx("C:DataUmar.xlsx",1)
+View(data_umar)
