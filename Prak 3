@@ -1,0 +1,74 @@
+# yang Pertama
+
+data_umar = read.csv("C:/Users/umara/OneDrive/Dokumen/Tugas/Prak Statistik/houseprices.csv")
+View(data_umar)
+
+umar <- data_umar[data_umar$Bedrooms==2,]  
+View(umar)
+
+umar$Bathrooms <- ifelse(umar$Bathrooms > 2, c("large"), c("small"))
+View(umar)
+
+umar$newvariable <- ifelse(umar$Offers > 2, c("large"), c("small")) 
+View(umar)
+
+umar$newvariable <- umar$Price/umar$SqFt
+View(umar)
+
+umar$newvariable<-NULL     
+
+data_umar.kolom1dan2 <- data_umar[,1:2] 
+View(data_umar.kolom1dan2)
+
+data_umar.kolom3dan4 <- data_umar[,3:4] 
+View(data_umar.kolom3dan4)
+
+data_umar.kolom1sd4<-cbind(data_umar.kolom1dan2, data_umar.kolom3dan4) 
+View(data_umar.kolom1sd4)
+
+data_umar.baris1sd3 <- data_umar[1:3,] 
+data_umar.baris4sd6 <- data_umar[4:6,] 
+data_umar.baris1sd6 <- rbind(data_umar.baris1sd3, data_umar.baris4sd6) 
+View(data_umar.baris1sd6)
+
+data_umar.sort<-data_umar[order(data_umar$Price),] 
+View(data_umar.sort)
+
+# Yang Kedua 
+
+data_umar = read.csv("C:/Users/umara/OneDrive/Dokumen/Tugas/DataUmar.csv")
+View(data_umar)
+
+data_umar.tinggibadan <- data_umar[4]
+View(data_umar.tinggibadan)
+
+data_umar = read.csv("C:/Users/umara/OneDrive/Dokumen/Tugas/DataUmar.csv")
+View(data_umar)
+umar <- data_umar[data_umar$Tinggi.Badan==160,] 
+View(umar)
+umar$Tinggi.Badan <- ifelse(umar$Tinggi.Badan > 160, c("Tinggi"), c("Pendek"))
+View(umar)
+
+umar$Jurusan <- c("Infor21")
+View(umar)
+
+umar$Jurusan <- c("FTI")
+View(umar)
+
+umar$Fakultas<-NULL
+View(umar)
+
+data_umar.kolom1dan2 <- data_umar[,1:2]
+View(data_umar.kolom1dan2)
+data_umar.kolom3dan4 <- data_umar[,3:4]
+View(data_umar.kolom3dan4)
+data_umar.kolom1sd4<-cbind(data_umar.kolom1dan2, data_umar.kolom3dan4)
+View(data_umar.kolom1sd4)
+
+data_umar.baris1sd5 <- data_umar[1:5,]
+data_umar.baris25sd30 <- data_umar[25:30,]
+data_umar.baris1sd30 <- rbind(data_umar.baris1sd5, data_umar.baris25sd30)
+View(data_umar.baris1sd30)
+
+data_umar.sort<-data_umar[order(data_umar$Waktu.Perjalanan),]
+View(data_umar.sort)
