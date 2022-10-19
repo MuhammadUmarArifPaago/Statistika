@@ -1,0 +1,15 @@
+#pertama
+ok=read.delim("clipboard")
+View(ok)
+str(ok)
+mean(ok$Volume) 
+t.test(ok$Volume, mu=10)
+
+
+#kedua
+ok=read.delim("clipboard")
+View(ok)
+str(ok)
+mean(ok$Pendapatan) 
+t.test(ok$Pendapatan, mu=14500)
+
