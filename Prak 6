@@ -1,0 +1,17 @@
+#1
+data_umar=read.csv("C:/Users/umara/OneDrive/Dokumen/Tugas/Semes_3/Prak Statistik/DirectMarketing.csv")
+View(data_umar)
+hist(data_umar$AmountSpent)
+hist(data_umar$AmountSpent[data_umar$Location=="Close"])
+hist(data_umar$AmountSpent[data_umar$Location=="Far"])
+d=density(data_umar$AmountSpent)
+plot(d)
+d=density(data_umar$AmountSpent[data_umar$Location=="Far"])
+plot (d)
+
+#2
+data_muap=read.csv("C:/Users/umara/OneDrive/Dokumen/Tugas/Semes_3/Prak Statistik/Houseprices.csv")
+View(data_muap)
+library(ggplot2)
+qplot(data_muap$Price, data_muap$Offers)
+plot(data_muap$Price, data_muap$Offers)
