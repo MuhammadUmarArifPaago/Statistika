@@ -1,0 +1,17 @@
+df_umar = read.delim("clipboard")
+View(df_umar)
+
+model <- aov(korosi~metode, data=df_umar)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+df_umar = PlantGrowth
+View(df_umar)
+
+model <- aov(weight~group, data=df_umar)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
