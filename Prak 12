@@ -1,0 +1,17 @@
+#1
+df_UMAR=read.delim("clipboard")
+head(df_UMAR)
+model_reg=lm(df_UMAR$Y~df_UMAR$X)
+summary(model_reg)
+
+#2 (1)
+df_umar=read.delim("clipboard")
+df_umar$brick_dummy <- ifelse(df_umar$Brick =="Yes", 1,0)
+df_umar$N_dummy1 <- ifelse(df_umar$Neighborhood =="West", 1,0)
+df_umar$N_dummy2 <- ifelse(df_umar$Neighborhood =="North", 1,0)
+model=lm(df_umar$Price~df_umar$SqFt+df_umar$Bedrooms+df_umar$Bathrooms+df_umar$brick_dummy+df_umar$N_dummy1+df_umar$N_dummy2)
+summary(model)
+
+#2 (2)
+by(df_umar$Price, df_umar$Neighborhood, mean)
+by(df_umar$Price, df_umar$Brick, mean)
