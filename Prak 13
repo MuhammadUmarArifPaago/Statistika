@@ -1,0 +1,19 @@
+#1
+dataku_umar = read.delim("clipboard")
+View(dataku_umar)
+wilcox.test(dataku_umar$Sebelum,dataku_umar$Sesudah,paired=TRUE)
+
+#2
+df_umar=read.delim("clipboard")
+wilcox.test(df_umar$obat~df_umar$grup)
+head(df_umar)
+rank(df_umar$obat)
+
+#3
+dataku_umar = read.delim("clipboard")
+View(dataku_umar)
+wilcox.test(dataku_umar$Ganjil,dataku_umar$Genap ,paired=TRUE)
+
+dataku_umar = read.delim("clipboard")
+View(dataku_umar)
+wilcox.test(dataku_umar$Caffeine,dataku_umar$Placebo ,paired=TRUE)
